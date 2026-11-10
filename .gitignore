@@ -1,0 +1,18 @@
+# Firmware secrets (copy secrets.example.h -> secrets.h)
+firmware/**/secrets.h
+firmware/**/build/
+
+# Client
+node_modules/
+dist/
+dev-dist/
+.env
+.env.*
+!.env.example
+*.pem
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
