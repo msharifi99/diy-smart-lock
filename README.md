@@ -11,6 +11,7 @@ You can read the full story in my blog post: **[My Recipe for a DIY Smart Lock](
 3. Between moves the servo is **detached**, so it doesn't fight you if you turn the knob by hand.
 
 ```
+cad/                    3D-printable parts (3MF/STL) and editable CAD (STEP/F3D)
 client/                 React + Vite PWA (the control panel)
 firmware/smart_lock/    Arduino sketch for the ESP32
 ```
@@ -22,6 +23,21 @@ firmware/smart_lock/    Arduino sketch for the ESP32
 - A door cylinder with a **thumb-turn knob** on the inside, of a type that opens the lock when you turn it
 - A 5V 3A power adapter, plus a buck converter that steps 5V down to 3.3V for the ESP32
 - 3D-printed parts: a connector from the servo horn to the knob, and a mount that holds the servo on the door
+
+## 3D-printed parts
+
+All parts are in [`cad/`](cad/). Use the **3MF** (or STL) files to print, and the **STEP** or Fusion 360 (**F3D/F3Z**) files to edit.
+
+| Part | Folder | What it does |
+|---|---|---|
+| Lock connector | [`cad/Connector`](cad/Connector) | Fits the servo horn on one end and the cylinder's thumb-turn knob on the other |
+| Door base | [`cad/Door base`](cad/Door%20base) | Gets fixed on the door and holds the handles |
+| Handles | [`cad/Handles`](cad/Handles) | Slot into the base and clamp the servo body in place (you need two) |
+
+Printing notes:
+- **Check the connector against your own knob first.** It's shaped for my cylinder's knob. Yours is probably different, so adjust it in the STEP/F3D file before printing.
+- **Watch the orientation of the handles.** 3D prints are weakest where layers stack on each other. My first handle was printed with its layers lined up with the point the servo pushes on, and it split over time. Orient it so the force goes *across* the layers, not between them.
+- **Print both handles.** One seems stable enough at first, but with two the load is shared.
 
 ## 1. Firmware (ESP32)
 
