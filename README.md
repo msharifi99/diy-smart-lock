@@ -2,7 +2,7 @@
 
 An ESP32 that turns the thumb-turn knob of a door cylinder with a servo, plus a small web app (PWA) to open the door from your phone.
 
-The full story (the cylinder problem, the 3D-printed parts and what broke) is in the blog post: **[My Recipe for a DIY Smart Lock](https://rebbin.dev/posts/diy-smart-lock/)**.
+You can read the full story in my blog post: **[My Recipe for a DIY Smart Lock](https://rebbin.dev/posts/diy-smart-lock/)**.
 
 ## How it works
 
