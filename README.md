@@ -34,11 +34,6 @@ All parts are in [`cad/`](cad/). Use the **3MF** (or STL) files to print, and th
 | Door base | [`cad/Door base`](cad/Door%20base) | Gets fixed on the door and holds the handles |
 | Handles | [`cad/Handles`](cad/Handles) | Slot into the base and clamp the servo body in place (you need two) |
 
-Printing notes:
-- **Check the connector against your own knob first.** It's shaped for my cylinder's knob. Yours is probably different, so adjust it in the STEP/F3D file before printing.
-- **Watch the orientation of the handles.** 3D prints are weakest where layers stack on each other. My first handle was printed with its layers lined up with the point the servo pushes on, and it split over time. Orient it so the force goes *across* the layers, not between them.
-- **Print both handles.** One seems stable enough at first, but with two the load is shared.
-
 ## 1. Firmware (ESP32)
 
 1. Install the [Arduino IDE](https://www.arduino.cc/en/software), the **esp32** board package (by Espressif) and the **ESP32Servo** library.
